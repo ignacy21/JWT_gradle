@@ -1,0 +1,24 @@
+POST http://localhost:9090/api/v1/authenticate
+Content-Type: application/json
+
+{
+  "username": "firstname",
+  "password": "email@gmail.com"
+}
+
+###
+POST http://localhost:9090/api/v1/register
+Content-Type: application/json
+
+{
+  "firstname": "firstname",
+  "secondname": "secondname",
+  "email": "email@gmail.com",
+  "password": "1234"
+}
+
+###
+GET http://localhost:9090/api/v1/demo-controller
+Accept: application/json
+
+###
