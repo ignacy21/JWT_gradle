@@ -1,18 +1,18 @@
-POST http://localhost:9090/api/v1/authenticate
+POST http://localhost:9090/api/v1/auth/authenticate
 Content-Type: application/json
 
 {
-  "username": "firstname",
-  "password": "email@gmail.com"
+  "email": "email@gmail.com",
+  "password": "1234"
 }
 
 ###
-POST http://localhost:9090/api/v1/register
+POST http://localhost:9090/api/v1/auth/register
 Content-Type: application/json
 
 {
   "firstname": "firstname",
-  "secondname": "secondname",
+  "lastname": "lastname",
   "email": "email@gmail.com",
   "password": "1234"
 }
@@ -20,5 +20,5 @@ Content-Type: application/json
 ###
 GET http://localhost:9090/api/v1/demo-controller
 Accept: application/json
-
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJlbWFpbDFAZ21haWwuY29tIiwiaWF0IjoxNzA5ODAyOTg3LCJleHAiOjE3MDk4MDQ1MjN9.gTum2fv1WGm5WMs71yKJ-Z7WWrU0u7gCcznvDPIU9JI
 ###
