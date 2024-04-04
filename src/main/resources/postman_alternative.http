@@ -20,5 +20,5 @@ Content-Type: application/json
 ###
 GET http://localhost:9090/api/v1/demo-controller
 Accept: application/json
-Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJlbWFpbDFAZ21haWwuY29tIiwiaWF0IjoxNzA5ODAyOTg3LCJleHAiOjE3MDk4MDQ1MjN9.gTum2fv1WGm5WMs71yKJ-Z7WWrU0u7gCcznvDPIU9JI
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJlbWFpbEBnbWFpbC5jb20iLCJpYXQiOjE3MTIyNDY4NzEsImV4cCI6MTcxMjI0ODQwN30.GTicoB0GnfDxICZW_N-OH1IpYRkMX3jo5QyRfRW99aU
 ###
