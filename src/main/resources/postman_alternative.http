@@ -1,24 +1,46 @@
-POST http://localhost:9090/api/v1/auth/authenticate
+### login user
+POST http://localhost:9090/auth/login
 Content-Type: application/json
 
 {
-  "email": "email@gmail.com",
+  "email": "user@gmail.com",
   "password": "1234"
 }
 
-###
-POST http://localhost:9090/api/v1/auth/register
+### login admin
+POST http://localhost:9090/auth/login
 Content-Type: application/json
 
 {
-  "firstname": "firstname",
-  "lastname": "lastname",
-  "email": "email@gmail.com",
+  "email": "admin@gmail.com",
   "password": "1234"
 }
 
-###
-GET http://localhost:9090/api/v1/demo-controller
+### register admin
+POST http://localhost:9090/auth/register
+Content-Type: application/json
+
+{
+  "role": "ADMIN",
+  "firstname": "admin",
+  "lastname": "admin",
+  "email": "admin@gmail.com",
+  "password": "1234"
+}
+
+### register user
+POST http://localhost:9090/auth/register
+Content-Type: application/json
+
+{
+  "role": "USER",
+  "firstname": "user",
+  "lastname": "user",
+  "email": "user@gmail.com",
+  "password": "1234"
+}
+
+### get1
+GET http://localhost:9090/demo/get1
 Accept: application/json
-Authorization: Bearer eyJhbGciOiJIUzM4NCJ9.eyJzdWIiOiJlbWFpbEBnbWFpbC5jb20iLCJpYXQiOjE3MTIyNjEzMTYsImV4cCI6MTcxMjI2Mjg1Mn0.Gw-cyNk5W64qVjOYNIm4KMyeEQCJ9gAGlvTzqDp4RqbhUunmQAPn37X602o024jG
-###
+Authorization: Bearer eyJhbGciOiJIUzM4NCJ9.eyJzdWIiOiJhZG1pbkBnbWFpbC5jb20iLCJpYXQiOjE3MTIzMzA2MjQsImV4cCI6MTcxMjMzMjE2MH0.gh-FBw98eYPzpa2aYGFylf6hr_voCjTdloqCCH6I5WyP67gevad6nrAwZnDBI7Ov
