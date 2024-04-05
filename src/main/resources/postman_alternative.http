@@ -40,7 +40,7 @@ Content-Type: application/json
   "password": "1234"
 }
 
-### get1
-GET http://localhost:9090/demo/get1
+### get
+GET http://localhost:9090/demo/get3
 Accept: application/json
-Authorization: Bearer eyJhbGciOiJIUzM4NCJ9.eyJzdWIiOiJhZG1pbkBnbWFpbC5jb20iLCJpYXQiOjE3MTIzMzA2MjQsImV4cCI6MTcxMjMzMjE2MH0.gh-FBw98eYPzpa2aYGFylf6hr_voCjTdloqCCH6I5WyP67gevad6nrAwZnDBI7Ov
+Authorization: Bearer eyJhbGciOiJIUzM4NCJ9.eyJzdWIiOiJ1c2VyQGdtYWlsLmNvbSIsImlhdCI6MTcxMjMzNTY2MCwiZXhwIjoxNzEyMzM3MTk2fQ.wYT9UYnrap18_IesMbMuI5XICT__cymCAydSnXYWwrLzQ2GheETwsN7Eo4GMxVhQ

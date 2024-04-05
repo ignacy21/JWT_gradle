@@ -22,10 +22,13 @@ public class SecurityConfiguration {
     public SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception {
 
         HttpSecurity build = http
-                .authorizeHttpRequests(auth -> {
-                    auth.requestMatchers("/auth/**").permitAll();
-                    auth.anyRequest().authenticated();
-                })
+                .authorizeHttpRequests(auth -> auth
+                        .requestMatchers("/auth/**").permitAll()
+                        .requestMatchers("/demo/get1").permitAll()
+                        .requestMatchers("/demo/get2").hasAnyAuthority("ADMIN")
+                        .requestMatchers("/demo/get3").hasAnyAuthority("USER")
+                        .anyRequest().authenticated()
+                )
                 .csrf(csrf -> csrf.ignoringRequestMatchers("/**"))
                 .cors(httpSecurityCorsConfigurer ->
                         httpSecurityCorsConfigurer.configure(http))
