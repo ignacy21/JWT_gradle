@@ -16,25 +16,32 @@ public class DemoController {
     private final UserService userService;
 
     @GetMapping(value = "/get1")
-    public ResponseEntity<String> sayHelloToAll(
+    public UserData sayHelloToAll(
             @RequestHeader("Authorization") String authorizationHeader
     ) {
-        User user = userService.userData(authorizationHeader.substring("Bearer ".length()));
-        return ResponseEntity.ok("Hello from secured endpoint \n" + user);
-    }
-    @GetMapping(value = "/get2")
-    public ResponseEntity<String> sayHelloToAmin(
-            @RequestHeader("Authorization") String authorizationHeader
-    ) {
-        User user = userService.userData(authorizationHeader.substring("Bearer ".length()));
-        return ResponseEntity.ok("Hello from secured endpoint \n" + user);
-    }
-    @GetMapping(value = "/get3")
-    public ResponseEntity<String> sayHelloToUser(
-            @RequestHeader("Authorization") String authorizationHeader
-    ) {
-        User user = userService.userData(authorizationHeader.substring("Bearer ".length()));
-        return ResponseEntity.ok("Hello from secured endpoint \n" + user);
+        return getUserData(authorizationHeader);
     }
 
+    @GetMapping(value = "/get2")
+    public UserData sayHelloToAmin(
+            @RequestHeader("Authorization") String authorizationHeader
+    ) {
+        return getUserData(authorizationHeader);
+    }
+
+    @GetMapping(value = "/get3")
+    public UserData sayHelloToUser(
+            @RequestHeader("Authorization") String authorizationHeader
+    ) {
+        return getUserData(authorizationHeader);
+    }
+
+    private UserData getUserData(String authorizationHeader) {
+        User user = userService.userData(authorizationHeader.substring("Bearer ".length()));
+        return UserData.builder()
+                .firstname(user.getFirstname())
+                .lastname(user.getLastname())
+                .email(user.getEmail())
+                .build();
+    }
 }
