@@ -12,7 +12,7 @@ POST http://localhost:9090/auth/login
 Content-Type: application/json
 
 {
-  "email": "admin@gmail.com",
+  "email": "admin1@gmail.com",
   "password": "1234"
 }
 
@@ -22,9 +22,9 @@ Content-Type: application/json
 
 {
   "role": "ADMIN",
-  "firstname": "admin",
-  "lastname": "admin",
-  "email": "admin@gmail.com",
+  "firstname": "admin1",
+  "lastname": "admin1",
+  "email": "admin1@gmail.com",
   "password": "1234"
 }
 
@@ -41,6 +41,6 @@ Content-Type: application/json
 }
 
 ### get
-GET http://localhost:9090/demo/get3
+GET http://localhost:9090/demo/get1
 Accept: application/json
-Authorization: Bearer eyJhbGciOiJIUzM4NCJ9.eyJzdWIiOiJ1c2VyQGdtYWlsLmNvbSIsImlhdCI6MTcxMjMzNTY2MCwiZXhwIjoxNzEyMzM3MTk2fQ.wYT9UYnrap18_IesMbMuI5XICT__cymCAydSnXYWwrLzQ2GheETwsN7Eo4GMxVhQ
+Authorization: Bearer eyJhbGciOiJIUzM4NCJ9.eyJzdWIiOiJuYW1lQGdtYWlsLmNvbSIsImlhdCI6MTcxMjY4Mjk1NiwiZXhwIjoxNzEyNjg0NDkyfQ.QG14KMV-GEDuyECDhFoD50fJYrhtmijqMyxXujHd8tfHNyGSEZ5j3caES7FZcRZx
